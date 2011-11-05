@@ -391,6 +391,11 @@ service vold /system/bin/vold
     socket vold stream 0660 root mount
     ioprio be 2
 
+service swapon /system/bin/busybox swapon /dev/block/mmcblk0p3
+    class core
+    user root
+    oneshot
+
 service netd /system/bin/netd
     class main
     socket netd stream 0660 root system
