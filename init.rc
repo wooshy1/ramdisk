@@ -466,10 +466,6 @@ service hostapd /system/bin/hostapd -dddd /data/misc/wifi/hostapd.conf
     oneshot
     disabled
 
-# Bluetooth/WLAN coexistance filter for Atheros AR600x
-service abtfilt /system/bin/abtfilt -c -d -z -n
-    user root
-
 # DHCP server for Atheros
 service dhcpcd /system/bin/dhcpcd -d athap0
     disabled
